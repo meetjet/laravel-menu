@@ -3,8 +3,8 @@
 namespace Meetjet\LaravelMenu\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Meetjet\LaravelMenu\LaravelMenuServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

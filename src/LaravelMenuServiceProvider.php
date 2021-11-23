@@ -2,9 +2,9 @@
 
 namespace Meetjet\LaravelMenu;
 
+use Meetjet\LaravelMenu\Commands\LaravelMenuCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Meetjet\LaravelMenu\Commands\LaravelMenuCommand;
 
 class LaravelMenuServiceProvider extends PackageServiceProvider
 {
