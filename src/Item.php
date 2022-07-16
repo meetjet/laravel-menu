@@ -185,7 +185,7 @@ class Item implements Arrayable
      */
     public function hasIcon(): bool
     {
-        return !is_null($this->icon);
+        return ! is_null($this->icon);
     }
 
     /**
@@ -233,7 +233,7 @@ class Item implements Arrayable
      */
     public function isHidden(): bool
     {
-        return !$this->isVisible();
+        return ! $this->isVisible();
     }
 
     /**
@@ -263,7 +263,7 @@ class Item implements Arrayable
      */
     public function if($callback): Item
     {
-        if (!is_callable($callback)) {
+        if (! is_callable($callback)) {
             $callback = function () use ($callback) {
                 return $callback;
             };

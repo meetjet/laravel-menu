@@ -13,7 +13,6 @@ class LaravelMenu
      */
     protected Collection $menus;
 
-
     /**
      * The constructor.
      */
@@ -31,7 +30,7 @@ class LaravelMenu
      */
     public function __call(string $method_name, array $args)
     {
-        if (!method_exists($this, $method_name)) {
+        if (! method_exists($this, $method_name)) {
             return call_user_func_array([$this->menus, $method_name], $args);
         }
     }
@@ -52,7 +51,7 @@ class LaravelMenu
      */
     public function register(string $name): Menu
     {
-        if (!$menu = $this->get($name)) {
+        if (! $menu = $this->get($name)) {
             $menu = new Menu($name);
             $this->menus->put($name, $menu);
         }

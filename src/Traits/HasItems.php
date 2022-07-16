@@ -22,7 +22,7 @@ trait HasItems
      */
     public function __call($method_name, $args)
     {
-        if (!method_exists($this, $method_name)) {
+        if (! method_exists($this, $method_name)) {
             return call_user_func_array([$this->items, $method_name], $args);
         }
     }
@@ -34,7 +34,7 @@ trait HasItems
     {
         $item = new Item($attributes, $this);
 
-        if (!array_key_exists('order', $attributes)) {
+        if (! array_key_exists('order', $attributes)) {
             $item->order = count($this->items);
         }
 
@@ -70,7 +70,7 @@ trait HasItems
      */
     public function findByTitleOrAdd(string $title, array $attributes = []): ?Item
     {
-        if (!($item = $this->findBy('title', $title))) {
+        if (! ($item = $this->findBy('title', $title))) {
             $item = $this->add(compact('title', 'attributes'));
         }
 

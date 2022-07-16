@@ -2,10 +2,6 @@
 
 namespace Meetjet\LaravelMenu;
 
-use Illuminate\Contracts\Config\Repository;
-use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
-use Inertia\Inertia;
 use Meetjet\LaravelMenu\Commands\LaravelMenuCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
