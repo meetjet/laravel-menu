@@ -11,6 +11,6 @@ class LaravelMenuFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'laravel-menu';
+        return LaravelMenu::class;
     }
 }
